@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="form-steps">
+        <div class="steps">
+          <div class="step blue" id="step-1">1</div>
+          <div class="step" id="step-2">2</div>
+          <div class="step" id="step-3">3</div>
+          <div class="step" id="step-4">4</div>
+        </div>
+        <div class="steps-info">
+          <h6>step 1</h6>
+          <h5>your info</h5>
+          <h6>step 2</h6>
+          <h5>select plan</h5>
+          <h6>step 3</h6>
+          <h5>add-ons</h5>
+          <h6>step 4</h6>
+          <h5>summary</h5>
+        </div>
+      </div>
+      <div class="form-infos ">
+        <div class="info">
+          <div class="info-text">
+            <h2>Personal info</h2>
+            <p>Please provide your name and email address and phone number.</p>
+          </div>
+          <div class="input-boxes">
+            <div class="input-text">
+              <h3>Name</h3>
+              <h5 id="error-field-1"></h5>
+            </div>
+            <input
+              id="input-field-1"
+              type="text"
+              placeholder="e.g. Stephen King"
+            />
+            <div class="input-text">
+              <h3>Email Address</h3>
+              <h5 id="error-field-2"></h5>
+            </div>
+            <input
+              id="input-field-2"
+              type="email"
+              placeholder="e.g. stephenking@lorem.com"
+            />
+            <div class="input-text">
+              <h3>Phone Number</h3>
+              <h5 id="error-field-3"></h5>
+            </div>
+            <input
+              type="number"
+              id="input-field-3"
+              placeholder="e.g. +1 234 567 890"
+            />
+          </div>
+        </div>
+        <div class="end-btn">
+          <a id="first-pge-back" href="#"></a>
+          <button id="first-pge-btn">Next Step</button>
+        </div>
+      </div>
+      <div class="form-plan hide">
+        <div class="plan">
+          <div class="plan-text">
+            <h2>Select Your Plan</h2>
+            <p>You have the option of monthly or yearly billing</p>
+          </div>
+          <div class="select-plans">
+            <input
+              class="radio-btn"
+              type="radio"
+              name="game-pack"
+              id="pack-radio-1"
+              value="Arcade"
+            />
+            <label for="pack-radio-1" class="arcade">
+              <img src="/assets/images/icon-arcade.svg" />
+              <div class="mod">
+                <h3>Arcade</h3>
+                <h4 class="price">$9/mo</h4>
+                <span class="free hide">2 months free</span>
+              </div>
+            </label>
+            <input
+              class="radio-btn"
+              type="radio"
+              name="game-pack"
+              id="pack-radio-2"
+              value="Advance"
+            />
+            <label for="pack-radio-2" class="advance">
+              <img src="/assets/images/icon-advanced.svg" />
+              <div class="mod">
+                <h3>Advance</h3>
+                <h4 class="price">$12/mo</h4>
+                <span class="free hide">2 months free</span>
+              </div>
+            </label>
+            <input
+              class="radio-btn"
+              type="radio"
+              name="game-pack"
+              id="pack-radio-3"
+              value="Pro"
+            />
+            <label for="pack-radio-3" class="pro">
+              <img src="/assets/images/icon-pro.svg" />
+              <div class="mod">
+                <h3>pro</h3>
+                <h4 class="price">$15/mo</h4>
+                <span class="free hide">2 months free</span>
+              </div>
+            </label>
+          </div>
+          <div class="toggle-btn">
+            <h3 id="month">Monthly</h3>
+            <div class="center">
+              <input id="plan-check" type="checkbox" name="" />
+            </div>
+            <h3 id="year">Yearly</h3>
+          </div>
+        </div>
+        <div class="end-btn">
+          <a id="second-pge-back" href="#">Go Back</a>
+          <button id="second-pge-btn">Next Step</button>
+        </div>
+      </div>
+      <div class="form-add-ons hide">
+        <div class="add-ons">
+          <div class="add-ons-text">
+            <h2>Pick add-ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p>
+          </div>
+          <div class="select-add-ons">
+            <div class="first">
+              <input type="checkbox" name="adds" value="service"/>
+              <div class="text-add-ons">
+                <h3>Online Service</h3>
+                <h4 class="text-decs">Asscess to multiplayer games</h4>
+              </div>
+              <p class="addon-price">+1/mo</p>
+            </div>
+            <div class="second">
+              <input type="checkbox" name="adds" value="storage"/>
+              <div class="text-add-ons">
+                <h3>Larger Storage</h3>
+                <h4 class="text-decs">Extra 1TB of cloud save</h4>
+              </div>
+              <p class="addon-price">+2/mo</p>
+            </div>
+            <div class="third">
+              <input type="checkbox" name="adds" value="profile"/>
+              <div class="text-add-ons">
+                <h3>Customizable profile</h3>
+                <h4 class="text-decs">Custom theem on your profile</h4>
+              </div>
+              <p class="addon-price">+2/mo</p>
+            </div>
+          </div>
+        </div>
+        <div class="end-btn">
+          <a id="third-pge-back" href="#">Go Back</a>
+          <button id="third-pge-btn">Next Step</button>
+        </div>
+      </div>
+      <div class="form-summary hide">
+        <div class="summary">
+          <div class="summary-text">
+            <h2>Finishing up</h2>
+            <p>Double-check everything looks OK before confusing.</p>
+          </div>
+          <div class="bill">
+            <div class="active-plan">
+              <h3 id="your-plan">(plan)</h3>
+              <h4 id="plan-cost">(price)</h4>
+            </div>
+            <a id="change" href="#">change</a>
+            <hr />
+            <div class="active-addons">
+              <div class="addon-1 hide">
+                <p>online service</p>
+                <h5 class="last-price">+$1/mo</h5>
+              </div>
+              <div class="hide addon-2">
+                <p>Larger storage</p>
+                <h5 class="last-price">+$2/mo</h5>
+              </div>
+              <div class="addon-3 hide">
+                <p>Customizable Profile</p>
+                <h5 class="last-price">+$2/mo</h5>
+              </div>
+            </div>
+          </div>
+          <div class="total">
+            <p>Total</p>
+            <h6 id="grand-total">+$12/mo</h6>
+          </div>
+        </div>
+        <div class="end-btn">
+          <a id="forth-pge-back" href="#">Go Back</a>
+          <button id="forth-pge-btn">Confirm</button>
+        </div>
+      </div>
+      <div class="form-thankyou hide">
+        <img src="/assets/images/icon-thank-you.svg" />
+        <h1>Thank you!</h1>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </p>
+      </div>
+    </form>
+    <script src="/script.js"></script>
+  </body>
+</html>
